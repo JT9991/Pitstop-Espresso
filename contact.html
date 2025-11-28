@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Bookings | Pitstop Espresso Moorabbin</title>
+
+  <meta name="description"
+        content="Contact Pitstop Espresso in Moorabbin to book a table, ask about dietary options or plan your next coffee catch-up. View our location and opening hours.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <!-- Logo (click to homepage) -->
+      <a href="index.html" class="logo" aria-label="Pitstop Espresso home">
+        <img src="./images/logo/pitstop-espresso-logo.png" class="logo-img" alt="Pitstop Espresso café logo">
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <div class="hamburger"
+           id="hamburger"
+           onclick="toggleMenu()"
+           aria-label="Toggle navigation menu"
+           role="button"
+           tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="navMenu" class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="container">
+
+    <section class="contact-header">
+      <h1>Book a Table at Pitstop Espresso</h1>
+      <p>Use the form below to make a booking enquiry. We’ll get back to you to confirm your reservation.</p>
+    </section>
+
+    <div class="contact-layout">
+
+      <div class="contact-form">
+        <form aria-label="Table booking form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required>
+
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required>
+
+          <label for="time">Time</label>
+          <input id="time" name="time" type="time" required>
+
+          <label for="guests">Guests</label>
+          <input id="guests" name="guests" type="number" min="1" required>
+
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <small class="privacy-note">
+            Your booking details are used only to manage your reservation and are not shared with third parties.
+          </small>
+
+          <button type="submit" class="cta-btn">Submit Booking</button>
+        </form>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          title="Pitstop Espresso location on map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.6108382739775!2d145.05903556966524!3d-37.943432740626726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66c05fd4d3e33%3A0x70fbfe63bc4c8c0!2s209%20Chesterville%20Rd%2C%20Moorabbin%20VIC%203189!5e0!3m2!1sen!2sau!4v1764254084466!5m2!1sen!2sau"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <section class="info-cards" aria-label="Café contact information">
+          <div class="info-card">
+            <h3>Location</h3>
+            <p>209 Chesterville Rd<br>Moorabbin VIC 3189</p>
+
+            <h3>Opening Hours</h3>
+            <p>Monday – Sunday<br>7:00 AM – 4:00 PM</p>
+
+            <h3>Contact</h3>
+            <p>Phone: (03) 9123 4567<br>Email: hello@pitstopespresso.com</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
+  </footer>
+
+  <script src="./functions.js"></script>
+</body>
+</html>

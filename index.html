@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Coffee in Moorabbin | Pitstop Espresso Café</title>
+
+  <meta name="description"
+        content="Pitstop Espresso is a cosy Moorabbin café serving specialty coffee, brunch, milkshakes and all-day bites with a motorsport-inspired atmosphere.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Pitstop Espresso home">
+        <img src="./images/logo/pitstop-espresso-logo.png" class="logo-img" alt="Pitstop Espresso café logo">
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <div class="hamburger"
+           id="hamburger"
+           onclick="toggleMenu()"
+           aria-label="Toggle navigation menu"
+           role="button"
+           tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="navMenu" class="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="container">
+
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+    
+      <div class="hero-content">
+        <h1>Welcome to Pitstop Espresso</h1>
+        <p>Your neighbourhood stop for premium coffee, fresh food, and a touch of motorsport passion.</p>
+        <a href="contact.html" class="cta-btn">Book a Table</a>
+      </div>
+    </section>
+    
+    <section class="about-split">
+      <div class="about-text">
+        <h2>About Pitstop Espresso</h2>
+        <p>
+          At Pitstop Espresso, we bring together the best of Moorabbin café culture with the energy of the motorsport world.
+          Whether you’re rolling in on two wheels or walking in for your morning coffee, you’ll find specialty brews,
+          handcrafted bites, and a warm space designed for everyone. Riders love our motorsport-inspired atmosphere, and
+          locals love our friendly service — making Pitstop Espresso the perfect place to refuel, relax, and connect.
+        </p>
+      </div>
+    
+      <div class="about-img">
+        <img src="./images/stock/img1.jpg" alt="Inside Pitstop Espresso café with motorsport inspired design">
+      </div>
+    </section>
+    
+    <!-- Combined Featured + Specials Section -->
+    <article class="featured-specials menu-border">
+    
+      <div class="featured-bg">
+        <div class="featured-overlay"></div>
+    
+        <div class="featured-specials-inner">
+    
+          <h2>Featured & Weekly Specials</h2>
+    
+          <p class="featured-description">
+            This week, try our <strong>Grilled Chicken Rice Bowl</strong> — a customer favourite that pairs perfectly
+            with our freshmade beverages. Here are more specials our riders and regulars love:
+          </p>
+    
+    <div class="featured-grid product-style">
+    
+        <div class="product-card">
+            <img src="./images/stock/caramel-macchiato.webp" alt="Caramel Macchiato">
+            <h3>Caramel Macchiato</h3>
+            <p>A smooth espresso topped with steamed milk and rich caramel drizzle, perfectly balanced for a sweet yet bold finish.</p>
+        </div>
+    
+        <div class="product-card">
+            <img src="./images/stock/Nutella-Hazelnut-Shake.jpeg" alt="Nutella Hazelnut Shake">
+            <h3>Nutella Hazelnut Shake</h3>
+            <p>A thick, creamy Nutella blend shaken to perfection and finished with crushed hazelnuts for an indulgent treat.</p>
+        </div>
+    
+        <div class="product-card">
+            <img src="./images/stock/Grilled-Chicken-Rice-Bowl.png" alt="Grilled Chicken Rice Bowl">
+            <h3>Grilled Chicken Rice Bowl</h3>
+            <p>Tender grilled chicken served over warm seasoned rice with a smoky house sauce — a hearty favourite among riders.</p>
+        </div>
+    
+    </div>
+    
+          <div class="center-btn">
+            <a href="menu.html" class="cta-btn">View Full Menu Here</a>
+          </div>
+    
+        </div>
+      </div>
+    
+    </article>
+    
+        <section class="info-cards" aria-label="Location, hours and contact details">
+    <div class="info-card">
+      <i class="fa-solid fa-location-dot info-icon"></i>
+      <h3>Location</h3>
+      <p>209 Chesterville Rd<br>Moorabbin VIC 3189</p>
+    </div>
+    
+    <div class="info-card">
+      <i class="fa-solid fa-clock info-icon"></i>
+      <h3>Opening Hours</h3>
+      <p>Monday – Sunday<br>7:00 AM – 4:00 PM</p>
+    </div>
+    
+    <div class="info-card">
+      <i class="fa-solid fa-phone info-icon"></i>
+      <h3>Contact</h3>
+      <p>Phone: (03) 9123 4567<br>Email: hello@pitstopespresso.com</p>
+    </div>
+    </section>
+    
+  </main>
+
+
+
+  <footer>
+    <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
+  </footer>
+
+  <script src="functions.js"></script>
+</body>
+</html>
