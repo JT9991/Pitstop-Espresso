@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 1600px; 
+    max-width: 1800px; 
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -91,6 +91,8 @@ h3 { font-size: 22px; }
     background: var(--repsol-orange);
     color: white;
 }
+
+
 
 /* Hide hamburger on desktop */
 .hamburger {
@@ -219,7 +221,7 @@ h3 { font-size: 22px; }
     min-height: 420px;
     background: url("./images/stock/img2.jpg") center/cover no-repeat;
     border-radius: 12px;
-    margin-top: 10px;
+    margin-top: 0;
     overflow: hidden;
 
     display: flex;
@@ -296,59 +298,79 @@ h3 { font-size: 22px; }
     margin-top: 25px;
 }
 
-/* ============================================
+/* ===========================================
    ABOUT SECTION
-============================================ */
-.about {
-    background: var(--light-grey);
-    padding: 60px 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-    text-align: center;
+=========================================== */
+
+.pitstop-about {
+    padding: 100px 40px;
+    background: var(--white);
 }
-/* ============================================
-   ABOUT SECTION — SPLIT LAYOUT (TEXT + IMAGE)
-============================================ */
-.about-split {
+
+.pitstop-about-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin: 10px 0;
-    padding: 30px 20px;
-    background: rgb(178, 165, 120);
-    border-radius: 12px;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    align-items: start;
 }
 
-.about-text h2 {
-    font-size: 55px;
-    margin-bottom: 15px;
-    color: var(--deep-blue);
+/* LEFT SIDE */
+.pitstop-about-left h2 {
+    font-size: 48px;
+    margin-bottom: 25px;
+    color: #000;
 }
 
-.about-text p {
-    font-size: 20px;
+.pitstop-about-left p {
+    font-size: 18px;
     line-height: 1.7;
-    color: var(--repsol-grey);
-
+    margin-bottom: 20px;
+    color: #222;
 }
 
-.about-img img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    object-fit: cover;
+.pitstop-about-left h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #000;
 }
 
-/* Mobile responsive layout */
-@media (max-width: 800px) {
-    .about-split {
+/* RIGHT BUTTON COLUMN */
+.pitstop-about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pitstop-btn {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 18px 25px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.pitstop-btn:hover {
+    background: var(--repsol-orange);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .pitstop-about-container {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 40px;
     }
 
-    .about-img img {
-        margin-top: 20px;
+    .pitstop-about-left h2 {
+        font-size: 38px;
     }
 }
 
