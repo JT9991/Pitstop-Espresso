@@ -51,6 +51,7 @@ h3 { font-size: 22px; }
     background: var(--navbar-gold);
     padding: 18px 0;
     width: 100%;
+    overflow: visible;
 }
 
 .navbar-inner {
@@ -63,8 +64,11 @@ h3 { font-size: 22px; }
 }
 
 .logo-img {
-    height: 70px;
+    height: 130px;      /* increase logo size */
     width: auto;
+    margin-top: -25px;  /* pull it upward so navbar height stays the same */
+    object-fit: contain;
+    display: block;
 }
 
 /* Desktop nav */
@@ -334,7 +338,6 @@ body.menu-open {
     height: 70vh;
     min-height: 420px;
     background: url("./images/stock/img2.jpg") center/cover no-repeat;
-    border-radius: 12px;
     margin-top: 0;
     overflow: hidden;
 
@@ -416,14 +419,13 @@ body.menu-open {
 ============================================ */
 
 .pitstop-about {
-    padding: 5px 40px 100px 40px;
+    padding: 5px 5px 5px 5px;
     background: var(--white);
 }
 
 .pitstop-about-container {
     max-width: 1500px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 70px;
@@ -515,7 +517,7 @@ body.menu-open {
    FEATURED + SPECIALS
 ============================================ */
 .featured-specials {
-    margin-top: 20px;
+    margin-top: 0;
     border-radius: 18px;
     padding: 0; /* Remove colored border spacing */
     background: none; /* Remove gradient background (border effect) */
@@ -788,12 +790,6 @@ body.menu-open {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.logo-img {
-    height: 70px;
-    width: auto;
-    display: block;
 }
 
 a:focus,
