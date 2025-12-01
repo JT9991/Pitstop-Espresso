@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4ED9GT4L2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4ED9GT4L2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E4ED9GT4L2');
+  </script>
 
-  gtag('config', 'G-E4ED9GT4L2');
-</script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pitstop Espresso Menu | Coffee, Milkshakes & Food in Moorabbin</title>
+  <meta name="description" content="Browse the Pitstop Espresso menu – specialty coffees, rider-inspired milkshakes and all-day bites at our Moorabbin café. Download the full menu as PDF.">
 
-  <meta name="description"
-        content="Browse the Pitstop Espresso menu – specialty coffees, rider-inspired milkshakes and all-day bites at our Moorabbin café. Download the full menu as PDF.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-
-  <!-- PAGE BACKGROUND (Option 3) -->
+  <!-- Page Background -->
   <div class="menu-bg"></div>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="navbar-inner">
-
       <a href="index.html" class="logo" aria-label="Pitstop Espresso home">
         <img src="./images/logo/pitstop-espresso-logo.png" class="logo-img" alt="Pitstop Espresso café logo">
       </a>
 
       <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
 
       <nav id="navMenu" class="nav-links" aria-label="Main navigation">
@@ -47,32 +40,27 @@
         <a href="menu.html" class="active">Menu</a>
         <a href="contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- Hero Section -->
   <main class="container">
-
-    <!-- HERO BANNER (Option 4) -->
     <section class="menu-hero">
       <div class="menu-hero-overlay"></div>
-
       <div class="menu-hero-content">
         <h1>Pitstop Espresso Menu</h1>
         <p>Explore our handcrafted coffees, fresh food and rider-inspired milkshakes in Moorabbin.</p>
       </div>
     </section>
 
+    <!-- Fancy Menu Cards -->
     <section class="menu-cards fancy-menu" aria-label="Menu categories">
-
       <!-- Coffee -->
       <div class="menu-card fancy">
         <div class="menu-icon" aria-hidden="true">🏍️☕</div>
         <h2>Coffees</h2>
         <p class="addons">Hot or iced · Large size +$0.50</p>
         <div class="tire-line" aria-hidden="true"></div>
-
         <ul class="fancy-list">
           <li><span>Long Black</span><strong>$3.50</strong></li>
           <li><span>Espresso</span><strong>$4.00</strong></li>
@@ -90,7 +78,6 @@
         <h2>Milkshakes</h2>
         <p class="addons">Maple, chocolate or Biscoff syrup · from +$0.50</p>
         <div class="tire-line" aria-hidden="true"></div>
-
         <ul class="fancy-list">
           <li><span>Vanilla Shake</span><strong>$6.50</strong></li>
           <li><span>Chocolate Shake</span><strong>$7.00</strong></li>
@@ -107,7 +94,6 @@
         <h2>Bites</h2>
         <p class="addons">Upgrade to a meal (fries + salad) +$5.80</p>
         <div class="tire-line" aria-hidden="true"></div>
-
         <ul class="fancy-list">
           <li><span>Garlic Bread</span><strong>$4.00</strong></li>
           <li><span>Chicken Nuggets</span><strong>$5.00</strong></li>
@@ -117,22 +103,47 @@
           <li class="highlight"><span>Grilled Chicken Rice Bowl</span><strong>$10.50</strong></li>
         </ul>
       </div>
-
     </section>
 
+    <!-- Download PDF -->
     <div class="download-section">
       <a href="PITSTOP-ESPRESSO-MENU.pdf" download class="cta-btn">
         Download Full Menu (PDF)
       </a>
     </div>
-
   </main>
 
-  <footer>
-    <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
+  <!-- FOOTER -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-card">
+        <i class="fa-solid fa-motorcycle footer-icon"></i>
+        <h3>About Us</h3>
+        <p>Serving riders, regulars and coffee lovers with handcrafted brews and motor-inspired food in Moorabbin.</p>
+      </div>
+
+      <div class="footer-card">
+        <i class="fa-solid fa-location-dot footer-icon"></i>
+        <h3>Location</h3>
+        <p>209 Chesterville Rd<br>Moorabbin VIC 3189</p>
+      </div>
+
+      <div class="footer-card">
+        <i class="fa-solid fa-phone footer-icon"></i>
+        <h3>Contact</h3>
+        <p>
+          <a href="tel:+61391234567">(03) 9123 4567</a><br>
+          <a href="mailto:hello@pitstopespresso.com">hello@pitstopespresso.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
+    </div>
   </footer>
 
+  <!-- JS -->
   <script src="functions.js"></script>
 </body>
 </html>
-

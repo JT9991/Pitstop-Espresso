@@ -73,21 +73,47 @@
       </div>
     </section>
     
-    <section class="about-split">
-      <div class="about-text">
-        <h2>About Pitstop Espresso</h2>
-        <p>
-          At Pitstop Espresso, we bring together the best of Moorabbin café culture with the energy of the motorsport world.
-          Whether you’re rolling in on two wheels or walking in for your morning coffee, you’ll find specialty brews,
-          handcrafted bites, and a warm space designed for everyone. Riders love our motorsport-inspired atmosphere, and
-          locals love our friendly service — making Pitstop Espresso the perfect place to refuel, relax, and connect.
-        </p>
-      </div>
-    
-      <div class="about-img">
-        <img src="./images/stock/img1.jpg" alt="Inside Pitstop Espresso café with motorsport inspired design">
-      </div>
-    </section>
+<section class="pitstop-about" aria-labelledby="about-title">
+
+  <div class="pitstop-about-container">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="pitstop-about-left">
+
+      <h2 id="about-title">Our story</h2>
+
+      <p>
+      Pitstop Espresso is where the road meets the roast — a home for riders who chase horizons and the perfect cup. We’re inspired by the spirit of motorcycling: freedom, independence, and the joy of the journey. Just like a good ride, a good coffee has a way of clearing the mind and lifting the day.
+      </p>
+
+      <p>
+        Enjoy handcrafted coffee, fresh meals, and a warm welcoming space inspired by Australia’s love 
+        for motorsport and café culture.
+      </p>
+
+      <h3>Opening Hours</h3>
+      <p>Monday to Sunday — 7am to 4pm</p>
+
+      <h3>Kitchen Hours</h3>
+      <p>
+        11am – 3pm Monday – Friday<br>
+        11am – 4pm Saturday – Sunday
+      </p>
+
+    </div>
+
+    <!-- RIGHT SIDE BUTTONS -->
+    <div class="pitstop-about-right">
+
+      <a href="contact.html" class="pitstop-btn">BOOK A TABLE</a>
+      <a href="menu.html" class="pitstop-btn">MENU</a>
+      <a href="contact.html" class="pitstop-btn">CONTACT US</a>
+
+    </div>
+
+  </div>
+
+</section>
     
     <!-- Combined Featured + Specials Section -->
     <article class="featured-specials menu-border">
@@ -135,7 +161,7 @@
     
     </article>
     
-        <section class="info-cards" aria-label="Location, hours and contact details">
+    <!-- <div class="info-cards" aria-label="Location, hours and contact details">
     <div class="info-card">
       <i class="fa-solid fa-location-dot info-icon"></i>
       <h3>Location</h3>
@@ -153,15 +179,42 @@
       <h3>Contact</h3>
       <p>Phone: (03) 9123 4567<br>Email: hello@pitstopespresso.com</p>
     </div>
-    </section>
+    </div> -->
     
   </main>
 
 
 
-  <footer>
+<footer class="main-footer" role="contentinfo" aria-label="Cafe contact information">
+  <div class="footer-content">
+
+    <div class="footer-card" aria-labelledby="footer-location">
+      <i class="fa-solid fa-location-dot footer-icon"></i>
+      <h3 id="footer-location">Location</h3>
+      <p>209 Chesterville Rd<br>Moorabbin VIC 3189</p>
+    </div>
+
+    <div class="footer-card" aria-labelledby="footer-hours">
+      <i class="fa-solid fa-clock footer-icon"></i>
+      <h3 id="footer-hours">Opening Hours</h3>
+      <p>Monday – Sunday<br>7:00 AM – 4:00 PM</p>
+    </div>
+
+    <div class="footer-card" aria-labelledby="footer-contact">
+      <i class="fa-solid fa-phone footer-icon"></i>
+      <h3 id="footer-contact">Contact</h3>
+      <p>
+        Phone: <a href="tel:+61391234567">(03) 9123 4567</a><br>
+        Email: <a href="mailto:hello@pitstopespresso.com">hello@pitstopespresso.com</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
     <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
-  </footer>
+  </div>
+</footer>
 
   <script src="functions.js"></script>
 </body>

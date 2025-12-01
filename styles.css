@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 1600px; 
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -45,9 +45,8 @@ h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 
 /* ============================================
-/* ===========================
    NAVBAR (DESKTOP DEFAULT)
-=========================== */
+============================================ */
 .navbar {
     background: var(--navbar-gold);
     padding: 18px 0;
@@ -86,8 +85,6 @@ h3 { font-size: 22px; }
 
 .nav-links a:hover,
 .nav-links a.active {
-    /* display:flex; */
-    align-items: flex-start;
     background: var(--repsol-orange);
     color: white;
 }
@@ -97,12 +94,131 @@ h3 { font-size: 22px; }
     display: none;
 }
 
-/* ===========================
+/* ============================================
+   MENU CARDS (FANCY STYLE)
+============================================ */
+.menu-cards.fancy-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.menu-card.fancy {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 16px;
+  border-top: 6px solid var(--repsol-orange);
+  border-right: 6px solid var(--navbar-gold);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease;
+}
+
+.menu-card.fancy:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.22);
+}
+
+.menu-card.fancy h2 {
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 28px;
+  color: var(--deep-blue);
+  margin-bottom: 10px;
+}
+
+.menu-icon {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.tire-line {
+  height: 6px;
+  width: 100%;
+  margin: 10px 0 25px 0;
+  border-radius: 3px;
+  opacity: 0.28;
+  background: repeating-linear-gradient(
+    90deg,
+    #000,
+    #000 10px,
+    transparent 10px,
+    transparent 22px
+  );
+}
+
+.fancy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fancy-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 17px;
+  border-bottom: 1px dashed #dcdcdc;
+}
+
+.fancy-list li span {
+  font-weight: 500;
+  color: var(--deep-blue);
+}
+
+.fancy-list li strong {
+  color: var(--repsol-orange);
+  font-weight: 700;
+}
+
+.fancy-list li.highlight {
+  background: rgba(246, 166, 14, 0.12);
+  border-radius: 6px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.addons {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--repsol-orange);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.download-section {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0; /* space above and below */
+}
+
+.cta-btn {
+  background: var(--repsol-orange);
+  color: var(--white);
+  padding: 12px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #c73a17;
+}
+
+
+
+/* ============================================
    MOBILE NAVBAR
-=========================== */
+============================================ */
 @media (max-width: 700px) {
 
-    .menu-bg {
+.menu-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -114,6 +230,7 @@ h3 { font-size: 22px; }
     pointer-events: none;
     filter: grayscale(30%);
 }
+
 .menu-hero {
     position: relative;
     height: 45vh;
@@ -128,6 +245,7 @@ h3 { font-size: 22px; }
     justify-content: center;
     align-items: center;
 }
+
 .menu-hero-overlay {
     position: absolute;
     inset: 0;
@@ -156,28 +274,27 @@ h3 { font-size: 22px; }
     color: #e8e8e8;
 }
 
-
-  body.menu-open {
+body.menu-open {
     overflow: hidden;
-  }
+}
 
-  .hamburger {
+.hamburger {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     z-index: 1001;
-  }
+}
 
-  .hamburger span {
+.hamburger span {
     width: 25px;
     height: 3px;
     background: #000;
     border-radius: 3px;
     transition: 0.3s ease;
-  }
+}
 
-  .nav-links {
+.nav-links {
     position: fixed;
     top: 0;
     right: -300px;
@@ -189,26 +306,25 @@ h3 { font-size: 22px; }
     gap: 20px;
     transition: right 0.3s ease;
     z-index: 999;
-  }
-
-  .nav-links.open {
-    right: 0;
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
 }
 
+.nav-links.open {
+    right: 0;
+}
 
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+}
 
 /* ============================================
    HERO SECTION – IMAGE + DARK OVERLAY
@@ -219,7 +335,7 @@ h3 { font-size: 22px; }
     min-height: 420px;
     background: url("./images/stock/img2.jpg") center/cover no-repeat;
     border-radius: 12px;
-    margin-top: 10px;
+    margin-top: 0;
     overflow: hidden;
 
     display: flex;
@@ -230,7 +346,7 @@ h3 { font-size: 22px; }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: brightness(0.85);
 }
 
@@ -256,20 +372,19 @@ h3 { font-size: 22px; }
 }
 
 @media (max-width: 700px) {
-  .hero {
-      height: 50vh;
-      min-height: 320px;
-  }
-
-  .hero-content h1 {
-      font-size: 32px;
-  }
-
-  .hero-content p {
-      font-size: 16px;
-  } 
+.hero {
+    height: 50vh;
+    min-height: 320px;
 }
 
+.hero-content h1 {
+    font-size: 32px;
+}
+
+.hero-content p {
+    font-size: 16px;
+}
+}
 
 /* ============================================
    CTA BUTTON
@@ -299,59 +414,78 @@ h3 { font-size: 22px; }
 /* ============================================
    ABOUT SECTION
 ============================================ */
-.about {
-    background: var(--light-grey);
-    padding: 60px 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-    text-align: center;
+
+.pitstop-about {
+    padding: 5px 40px 100px 40px;
+    background: var(--white);
 }
-/* ============================================
-   ABOUT SECTION — SPLIT LAYOUT (TEXT + IMAGE)
-============================================ */
-.about-split {
+
+.pitstop-about-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin: 10px 0;
-    padding: 30px 20px;
-    background: rgb(178, 165, 120);
-    border-radius: 12px;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    align-items: start;
 }
 
-.about-text h2 {
-    font-size: 55px;
-    margin-bottom: 15px;
-    color: var(--deep-blue);
+.pitstop-about-left h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #000;
+    margin-top: 0;
 }
 
-.about-text p {
-    font-size: 20px;
+.pitstop-about-left p {
+    font-size: 18px;
     line-height: 1.7;
-    color: var(--repsol-grey);
-
+    margin-bottom: 20px;
+    color: #222;
 }
 
-.about-img img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    object-fit: cover;
+.pitstop-about-left h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #000;
 }
 
-/* Mobile responsive layout */
-@media (max-width: 800px) {
-    .about-split {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-img img {
-        margin-top: 20px;
-    }
+/* RIGHT SIDE BUTTONS */
+.pitstop-about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
 }
 
+.pitstop-btn {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 18px 25px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.pitstop-btn:hover {
+    background: var(--repsol-orange);
+}
+
+@media (max-width: 900px) {
+.pitstop-about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.pitstop-about-left h2 {
+    font-size: 38px;
+}
+}
 
 /* ============================================
    POPULAR ITEMS
@@ -376,30 +510,26 @@ h3 { font-size: 22px; }
     font-family: 'Racing Sans One', cursive;
     font-size: 20px;
 }
-/* ============================================
-   FEATURED + SPECIALS — CLEAN REWRITE
-============================================ */
 
+/* ============================================
+   FEATURED + SPECIALS
+============================================ */
 .featured-specials {
-    margin-top: 20px; /* spacing above the block */
+    margin-top: 20px;
     border-radius: 18px;
-    padding: 3px;
-    background: linear-gradient(to bottom right, var(--repsol-orange), var(--navbar-gold));
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 0; /* Remove colored border spacing */
+    background: none; /* Remove gradient background (border effect) */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Optional: keep drop shadow */
 }
 
-/* Background image wrapper */
 .featured-bg {
     position: relative;
     background: url("./images/stock/featuredimg.webp") center/cover no-repeat;
     border-radius: 15px;
     overflow: hidden;
-
-    /* REDUCED padding — this is the gap creator */
-    padding: 25px 0; 
+    padding: 25px 0;
 }
 
-/* Dark overlay */
 .featured-overlay {
     position: absolute;
     inset: 0;
@@ -408,19 +538,15 @@ h3 { font-size: 22px; }
     z-index: 1;
 }
 
-/* Foreground content wrapper */
 .featured-specials-inner {
     position: relative;
     z-index: 2;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-
-    /* REDUCED padding — this controls inside spacing */
     padding: 30px 20px;
 }
 
-/* Heading */
 .featured-specials-inner h2 {
     font-size: 32px;
     margin-bottom: 10px;
@@ -428,18 +554,16 @@ h3 { font-size: 22px; }
     font-family: 'Racing Sans One', cursive;
 }
 
-/* Paragraph */
 .featured-description {
     font-size: 18px;
     max-width: 700px;
-    margin: 10px auto 20px auto; /* reduced bottom gap */
+    margin: 10px auto 20px auto;
     line-height: 1.6;
     color: #f1f1f1;
 }
 
-
 /* ============================================
-   PRODUCT-STYLE FEATURED CARDS
+   FEATURED GRID CARDS
 ============================================ */
 .product-style {
     display: grid;
@@ -498,60 +622,49 @@ h3 { font-size: 22px; }
     box-shadow: 0 12px 30px rgba(0,0,0,0.22);
 }
 
-/* Mobile adjustments */
 @media (max-width: 700px) {
-    .featured-specials-inner {
-        padding: 25px 15px;
-    }
-
-    .featured-specials-inner h2 {
-        font-size: 26px;
-    }
-
-    .featured-description {
-        font-size: 15px;
-    }
-
-
+.featured-specials-inner {
+    padding: 25px 15px;
 }
 
+.featured-specials-inner h2 {
+    font-size: 26px;
+}
+
+.featured-description {
+    font-size: 15px;
+}
+}
 
 /* ============================================
-   INFO CARDS (Premium Style)
+   INFO CARDS (OLD)
+   — You can remove IF footer replaces it
 ============================================ */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 35px;
-    padding: 10px 0;
+    padding: 30px 20px;
+    background: var(--deep-blue);
 }
 
 .info-card {
-    background: var(--deep-blue);
+    background: var(--white);
     color: var(--white);
     padding: 35px 25px;
     border-radius: 14px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0,0,0,0.18);
     transition: 0.25s ease;
-    border-top: 6px solid var(--repsol-orange); /* accent line */
+    border-top: 6px solid var(--repsol-orange);
 }
 
-/* Hover effect */
-.info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.28);
-}
-
-/* Heading style */
 .info-card h3 {
     font-size: 22px;
     margin-bottom: 12px;
     color: var(--repsol-yellow);
-    font-family: 'Racing Sans One', cursive;
 }
 
-/* Body text */
 .info-card p {
     font-size: 16px;
     line-height: 1.5;
@@ -562,147 +675,6 @@ h3 { font-size: 22px; }
     margin-bottom: 15px;
     color: var(--repsol-yellow);
     text-shadow: 0 3px 8px rgba(0,0,0,0.25);
-}
-
-
-/* ============================================
-   MENU PAGE
-============================================ */
-
-
-.menu-header {
-    text-align: center;
-    padding: 50px 0;
-}
-.menu-border {
-    border-radius: 18px;
-    padding: 3px;
-    background: linear-gradient(to bottom right, var(--repsol-orange), var(--navbar-gold));
-    margin-top: 0; /* FIXED */
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-
-.menu-border > .popular-items {
-    background: var(--white);
-    border-radius: 15px;
-    padding: 0;
-}
-
-.menu-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px 0;
-}
-
-.menu-card {
-    /* background: var(--light-grey); */
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 6px solid var(--repsol-orange);
-}
-
-.menu-card h2 {
-    color: var(--deep-blue);
-}
-
-.download-section {
-    text-align: center;
-    margin: 40px 0;
-}
-
-/* ============================================
-   FANCY MOTORCYCLE MENU
-============================================ */
-.menu-cards.fancy-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
-}
-
-.menu-card.fancy {
-    background: var(--white);
-    padding: 35px;
-    border-radius: 16px;
-    border-top: 6px solid var(--repsol-orange);
-    border-right: 6px solid var(--navbar-gold);
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
-    transition: 0.25s ease;
-}
-
-.menu-card.fancy:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.22);
-}
-
-.menu-icon {
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.menu-card.fancy h2 {
-    text-align: center;
-    font-family: 'Racing Sans One', cursive;
-    font-size: 28px;
-    color: var(--deep-blue);
-    margin-bottom: 10px;
-}
-
-.tire-line {
-    height: 6px;
-    width: 100%;
-    margin: 10px 0 25px 0;
-    border-radius: 3px;
-    opacity: 0.28;
-    background: repeating-linear-gradient(
-        90deg,
-        #000,
-        #000 10px,
-        transparent 10px,
-        transparent 22px
-    );
-}
-
-.fancy-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.fancy-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    font-size: 17px;
-    border-bottom: 1px dashed #dcdcdc;
-}
-
-.fancy-list li span {
-    font-weight: 500;
-    color: var(--deep-blue);
-}
-
-.fancy-list li strong {
-    color: var(--repsol-orange);
-    font-weight: 700;
-}
-
-.fancy-list li.highlight {
-    background: rgba(246, 166, 14, 0.12);
-    border-radius: 6px;
-    padding: 15px;
-    font-weight: 700;
-}
-
-.addons {
-    font-size: 13px;
-    line-height: 1.4;
-    color: var(--repsol-orange);
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
 /* ============================================
@@ -724,10 +696,9 @@ h3 { font-size: 22px; }
     background: var(--light-grey);
     padding: 25px;
     border-radius: 10px;
-    margin-bottom: 0;   /* Add this line to prevent pushing the layout down */
 }
 
-.contact-form form label {
+.contact-form label {
     display: block;
     margin-top: 10px;
     margin-bottom: 4px;
@@ -740,12 +711,7 @@ h3 { font-size: 22px; }
     padding: 10px;
     border: 1px solid var(--repsol-grey);
     border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 16px; /* Slight increase for spacing between fields */
-}
-
-.contact-form textarea {
-    margin-bottom: 0; /* Prevent bottom spacing below textarea */
+    margin-bottom: 16px;
 }
 
 .contact-map iframe {
@@ -756,40 +722,74 @@ h3 { font-size: 22px; }
 }
 
 /* ============================================
-   FOOTER
+   FOOTER (NEW)
 ============================================ */
-footer {
-    background: var(--deep-blue);
-    color: var(--white);
+.main-footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 20px 30px;
     text-align: center;
-    padding: 20px;
-    margin-top: 2px;
+    margin-top: 10px;
 }
 
-/* ===== FIXED LOGO SIZE CONTROL ===== */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-card {
+    max-width: 280px;
+    text-align: center;
+}
+
+.footer-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--repsol-yellow);
+}
+
+.footer-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Racing Sans One', cursive;
+    color: var(--repsol-yellow);
+}
+
+.footer-card p,
+.footer-card a {
+    font-size: 15px;
+    color: #eee;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-card a:hover {
+    color: var(--repsol-orange);
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+/* FIXED LOGO SIZE CONTROL */
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.logo-img {
-    height: 120px !important;   /* logo sizing */
-    width: auto !important;
-}
-
-.logo-text {
-    font-size: 26px !important;
-    color: var(--white);
-}
-/* Clickable logo link */
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-/* Control logo size */
 .logo-img {
     height: 70px;
     width: auto;
@@ -803,22 +803,47 @@ textarea:focus {
     outline: 2px solid var(--repsol-orange);
     outline-offset: 2px;
 }
+.testimonials {
+  padding: 60px 30px;
+  background: var(--light-grey);
+  text-align: center;
+}
 
-.featured {
-    margin-top: 10px;
-    padding: 25px 20px;
-    border-radius: 10px;
-    background: var(--light-grey);
+.testimonials h2 {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 34px;
+  color: var(--deep-blue);
+  margin-bottom: 40px;
 }
-.privacy-note {
-    display: block;
-    font-size: 12px;
-    margin-bottom: 10px;
-    color: var(--repsol-grey);
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-/* CLEAN MENU HEADER — removes grey box */
-.menu-header {
-    background: none !important;
-    padding: 40px 10px;
-    border-radius: 0 !important;
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--repsol-grey);
+}
+
+.testimonial-meta {
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
 }
