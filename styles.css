@@ -696,7 +696,7 @@ body.menu-open {
 }
 
 .contact-form {
-    background: var(--light-grey);
+    background: var(--pastel);
     padding: 25px;
     border-radius: 10px;
 }
@@ -846,3 +846,4 @@ textarea:focus {
   color: #333;
   font-weight: bold;
 }
+
