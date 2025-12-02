@@ -14,6 +14,7 @@
     --white: #FFFFFF;
     --light-grey: #F5F5F5;
     --deep-blue: #1C3664;
+    --pastel: #e5ded4;
 }
 
 /* ============================================
@@ -21,7 +22,7 @@
 ============================================ */
 body {
     margin: 0;
-    background: var(--white);
+    background: var(--pastel);
     color: var(--repsol-grey);
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -420,7 +421,7 @@ body.menu-open {
 
 .pitstop-about {
     padding: 5px 5px 5px 5px;
-    background: var(--white);
+    background: var(--pastel);
 }
 
 .pitstop-about-container {
@@ -801,7 +802,7 @@ textarea:focus {
 }
 .testimonials {
   padding: 60px 30px;
-  background: var(--light-grey);
+  background: var(--pastel);
   text-align: center;
   
 }
